@@ -1,1 +1,3 @@
 lifeflags/conf/local/*
+*.pyc
+*.db
