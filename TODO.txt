@@ -1,0 +1,6 @@
+* Create flag
+* View flag
+* Unique/short URL
+* Associate "flag on" field with twitter username
+* Associate "flag on" field with twitter usernames
+* Tweet @usernames when they've been flagged
