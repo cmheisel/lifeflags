@@ -15,13 +15,13 @@ class Flag(models.Model):
     penalty = models.CharField(max_length=255)
 
     def __unicode__(self):
-        return "%s - %s, %s." % (self.id, self.offense, self.players)
+        return "%s-%s - %s, %s." % (self.id, self.slug, self.offense, self.players)
 
     def __slug_seed(self):
         """
         Return a semi-reliably random and non-repetitive integer
         """
-        seed = random.randint(1,10000) + int(time.time()) #Random number + time as int
+        seed = random.randint(1,10000000) + int(time.time()) #Random number + time as int
         return base62.from_decimal(seed)
 
     def save(self, force_insert=False, force_update=False):

@@ -1,8 +1,11 @@
 from django.test import TestCase
+from django.db import IntegrityError
 
 from lifeflags.flags import models
 
 class FlagUnitTests(TestCase):
+    urls = 'lifeflags.flags.urls'
+
     def create_flag(self, overrides={}, save=True):
         """
         Convience function for creating Flag objects.
@@ -33,3 +36,22 @@ class FlagUnitTests(TestCase):
         f = self.create_flag(save=False)
         f.save()
         self.assert_(f.slug)
+
+    def test_slug_collision(self):
+        """
+        If we make 1000 slugs none should collide
+        """
+        for i in xrange(0,1000):
+            f = self.create_flag(save=False)
+            try:
+                f.save()
+            except IntegrityError, e:
+                print models.Flag.objects.all().count()
+                raise e
+                 
+
+    def test_view_show(self):
+        """
+        /(slug)/ should return a view of the Flag
+        """
+        pass
