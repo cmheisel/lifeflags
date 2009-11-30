@@ -24,7 +24,6 @@ class Flag(models.Model):
         seed = random.randint(1,10000) + int(time.time()) #Random number + time as int
         return base62.from_decimal(seed)
 
-
     def save(self, force_insert=False, force_update=False):
         if not self.slug:
             self.slug = "F%s" % self.__slug_seed() 
