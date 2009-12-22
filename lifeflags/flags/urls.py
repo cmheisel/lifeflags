@@ -1,8 +1,8 @@
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls.defaults import patterns, url, handler500, handler404
 
-from flags import views
+from lifeflags.flags import views
 
-SLUG_RE = '(?P<slug>\w+)$'
+SLUG_RE = '(?P<slug>\w+)/$'
 
 urlpatterns = patterns('',
     url(SLUG_RE, views.show), 

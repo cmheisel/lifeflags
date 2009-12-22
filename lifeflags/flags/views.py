@@ -1,2 +1,4 @@
+from django.http import HttpResponse
+
 def show(request, slug):
-    pass
+    return HttpResponse("Yo mo fo")

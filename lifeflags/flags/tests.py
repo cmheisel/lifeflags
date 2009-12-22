@@ -54,4 +54,8 @@ class FlagUnitTests(TestCase):
         """
         /(slug)/ should return a view of the Flag
         """
-        pass
+        f = self.create_flag()
+
+        r = self.client.get('/%s/' % f.slug)
+
+        self.assertEqual(r.status_code, 200)
