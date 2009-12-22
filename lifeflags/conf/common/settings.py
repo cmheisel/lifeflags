@@ -19,6 +19,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'lifeflags.conf.common.urls'
 
+SITE_ID = 1
+
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'lifeflags', 'templates')
 )
@@ -28,6 +30,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
 
     'lifeflags.flags',
 )
