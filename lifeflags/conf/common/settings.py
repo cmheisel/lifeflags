@@ -20,7 +20,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'lifeflags.conf.common.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, 'templates')
+    os.path.join(PROJECT_ROOT, 'lifeflags', 'templates')
 )
 
 INSTALLED_APPS = (
