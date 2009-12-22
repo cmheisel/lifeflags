@@ -29,3 +29,6 @@ class Flag(models.Model):
             self.slug = "F%s" % self.__slug_seed() 
         super(Flag, self).save(force_insert, force_update)
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('detail_view', (), {'slug': self.slug})

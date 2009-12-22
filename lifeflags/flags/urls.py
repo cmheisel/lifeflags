@@ -5,5 +5,5 @@ from lifeflags.flags import views
 SLUG_RE = '(?P<slug>\w+)/$'
 
 urlpatterns = patterns('',
-    url(SLUG_RE, views.show), 
+    url(SLUG_RE, views.show, name='detail_view'), 
 )
