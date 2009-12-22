@@ -59,3 +59,7 @@ class FlagUnitTests(TestCase):
         r = self.client.get('/%s/' % f.slug)
 
         self.assertEqual(r.status_code, 200)
+        
+        testvals = [f.offense, f.players, f.penalty]
+        [ self.assertContains(r, val) for val in testvals ]
+

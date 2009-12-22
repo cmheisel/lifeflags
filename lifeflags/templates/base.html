@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>{{ title }} | Flag on the play</title>
+    </head>
+
+    <body id="{% block body_id %}flag_body{% endblock %}" class="{% block body_classes %}normal{% endblock %}">
+        <div id="header">
+            Flag on the play
+        </div>
+
+        <div id="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div id="footer">
+            Footer
+        </div>
+    </body>
+</html>

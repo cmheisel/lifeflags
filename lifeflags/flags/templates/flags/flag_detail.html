@@ -1,0 +1,15 @@
+{% extends "base_site.html" %}
+
+{% block title %}
+{{ flag.offsnese }} {{ super }}
+{% endblock %}
+
+{% block content %}
+<h1>Flag on the play!</h1>
+
+<p>{{ flag.offense }}, {{ flag.players }}</p>
+
+<p>Penalty: {{ flag.penalty }}</p>
+{% endblock %}
+
+
