@@ -1,3 +1,10 @@
 lifeflags/conf/local/*
 *.pyc
 *.db
+.Python
+.DS_Store
+bin
+lib
+src
+include
+pip-log.txt
