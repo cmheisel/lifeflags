@@ -6,3 +6,7 @@ def show(request, slug):
     f = get_object_or_404(Flag, slug=slug)
     context = { 'flag': f }
     return render_to_response('flags/flag_detail.html', context)
+
+def index(request):
+    context = { 'form': None }
+    return render_to_response('flags/flag_index.html', context)
